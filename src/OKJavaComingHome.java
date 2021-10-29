@@ -6,10 +6,10 @@ import org.opentutorials.iot.Security;
 import org.opentutorials.iot.Lighting;
 
 public class OKJavaComingHome {
-	public static void main(String[] args) {
+	public static void main(String[] args) { // args또한 parameter (Run configuration을 통해서 바꿀 수 있음)
 
-		String home = JOptionPane.showInputDialog("Enter a home"); // 팝업 창으로 입력 받기
-		String bright = JOptionPane.showInputDialog("Enter a bright level"); // 팝업 창으로 입력 받기
+		String home = args[0]; // parameter를 통해서 입력값 받기
+		String bright = args[1];
 
 		// Elevator call
 		Elevator myElevator = new Elevator(home);
